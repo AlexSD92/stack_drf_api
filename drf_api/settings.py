@@ -36,6 +36,8 @@ CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = (
 
        'http://localhost:3000',
+       'https://stack-react.herokuapp.com', 
+       'https://3000-alexsd92-stackreact-f9omm9gmrth.ws-eu63.gitpod.io',
 
 )
 
@@ -52,11 +54,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
+    'corsheaders',
 
     'questions',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
