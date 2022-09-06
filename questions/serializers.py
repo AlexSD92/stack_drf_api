@@ -7,5 +7,5 @@ class QuestionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Question
         fields = [
-            'id', 'question', 'created_at', 'updated_at'
+            'id', 'summary', 'question', 'created_at', 'updated_at'
         ]
