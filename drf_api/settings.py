@@ -41,6 +41,15 @@ CORS_ORIGIN_WHITELIST = (
 
 )
 
+CORS_ALLOW_METHODS = [
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+]
+
 CSRF_TRUSTED_ORIGINS = ['https://8000-alexsd92-stackdrfapi-a7jwzd1r973.ws-eu63.gitpod.io', 'https://stack-drf-api.herokuapp.com']
 
 # Application definition
