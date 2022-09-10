@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['stack-drf-api.herokuapp.com', 'localhost']
 
@@ -50,7 +50,7 @@ CORS_ALLOW_METHODS = [
     "PUT",
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-alexsd92-stackdrfapi-a7jwzd1r973.ws-eu63.gitpod.io', 'https://stack-drf-api.herokuapp.com']
+CSRF_TRUSTED_ORIGINS = ['https://8000-alexsd92-stackdrfapi-a7jwzd1r973.ws-eu64.gitpod.io', 'https://stack-drf-api.herokuapp.com']
 
 # Application definition
 
@@ -68,7 +68,7 @@ INSTALLED_APPS = [
     'questions',
     'answers',
     'profiles',
-    
+
 ]
 
 MIDDLEWARE = [
