@@ -1,9 +1,10 @@
 from .models import Profile
 from .serializers import ProfileSerializer
-from rest_framework import generics
+from rest_framework import generics, permissions
+from drf_api.permissions import IsOwnerOrReadOnly
 
 
-class ProfileList(generics.ListCreateAPIView):
+class ProfileList(generics.ListAPIView):
     serializer_class = ProfileSerializer
     queryset = Profile.objects.all()
 
@@ -13,4 +14,5 @@ class ProfileList(generics.ListCreateAPIView):
 
 class ProfileDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = ProfileSerializer
+    permission_classes = [IsOwnerOrReadOnly]
     queryset = Profile.objects.all()
