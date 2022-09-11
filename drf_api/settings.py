@@ -52,7 +52,11 @@ CORS_ALLOW_METHODS = [
 
 CORS_ALLOW_CREDENTIALS = True
 
-CSRF_TRUSTED_ORIGINS = ['https://3000-alexsd92-stackreact-f9omm9gmrth.ws-eu64.gitpod.io', 'https://stack-drf-api.herokuapp.com']
+CSRF_TRUSTED_ORIGINS = [
+    'https://3000-alexsd92-stackreact-f9omm9gmrth.ws-eu64.gitpod.io',
+    'https://stack-drf-api.herokuapp.com', 
+    'https://8000-alexsd92-stackdrfapi-a398cuy78ue.ws-eu64.gitpod.io',
+    ]
 
 REST_USE_JWT = True
 JWT_AUTH_SECURE = True
