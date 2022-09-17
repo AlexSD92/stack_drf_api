@@ -79,8 +79,8 @@ REST_FRAMEWORK = {
 
 REST_AUTH_SERIALIZERS = {
     'USER_DETAILS_SERIALIZER': 'drf_api.serializers.CurrentUserSerializer', 
-    'LOGIN_SERIALIZER': 'path.to.custom.LoginSerializer',
-    'TOKEN_SERIALIZER': 'path.to.custom.TokenSerializer',
+    'LOGIN_SERIALIZER': 'dj_rest_auth.serializers.LoginSerializer',
+    'TOKEN_SERIALIZER': 'dj_rest_auth.serializers.TokenSerializer',
 }
 
 # Application definition
