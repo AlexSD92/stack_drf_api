@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['stack-drf-api.herokuapp.com', 'localhost']
 
@@ -38,6 +38,7 @@ CORS_ORIGIN_WHITELIST = (
        'http://localhost:3000',
        'https://stack-react.herokuapp.com', 
        'https://3000-alexsd92-stackreact-f9omm9gmrth.ws-eu64.gitpod.io',
+       'https://stack-drf-api.herokuapp.com',
 
 )
 
@@ -65,11 +66,12 @@ JWT_AUTH_REFRESH_COOKIE = 'my-refresh-token'
 JWT_AUTH_SAMESITE = 'None'
 
 REST_FRAMEWORK = {
+    'DATETIME_FORMAT': '%d/%b/%Y',
     'DEFAULT_AUTHENTICATION_CLASSES': [(
         'rest_framework.authentication.SessionAuthentication'
         if 'DEV' in os.environ
         else 'dj_rest_auth.jwt_auth.JWTCookieAuthentication'
-    )]
+    )],
 }
 
 REST_AUTH_SERIALIZERS = {
