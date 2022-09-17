@@ -81,6 +81,8 @@ REST_AUTH_SERIALIZERS = {
     'USER_DETAILS_SERIALIZER': 'drf_api.serializers.CurrentUserSerializer', 
     'LOGIN_SERIALIZER': 'dj_rest_auth.serializers.LoginSerializer',
     'TOKEN_SERIALIZER': 'dj_rest_auth.serializers.TokenSerializer',
+    'JWT_SERIALIZER': 'dj_rest_auth.serializers.JWTSerializer',
+    'JWT_TOKEN_CLAIMS_SERIALIZER': 'rest_framework_simplejwt.serializers.TokenObtainPairSerializer',
 }
 
 # Application definition
