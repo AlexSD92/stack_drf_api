@@ -38,8 +38,6 @@ CORS_ORIGIN_WHITELIST = (
        'http://localhost:3000',
        'https://stack-react.herokuapp.com', 
        'https://3000-alexsd92-stackreact-f9omm9gmrth.ws-eu64.gitpod.io',
-       'https://stack-drf-api.herokuapp.com',
-
 )
 
 CORS_ALLOW_METHODS = [
