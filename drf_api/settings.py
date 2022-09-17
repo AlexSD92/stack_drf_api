@@ -65,12 +65,17 @@ JWT_AUTH_SAMESITE = 'None'
 
 REST_FRAMEWORK = {
     'DATETIME_FORMAT': '%d/%b/%Y',
-    'DEFAULT_AUTHENTICATION_CLASSES': [(
-        'rest_framework.authentication.SessionAuthentication'
-        if 'DEV' in os.environ
-        else 'dj_rest_auth.jwt_auth.JWTCookieAuthentication'
-    )],
+    'DEFAULT_AUTHENTICATION_CLASSES': ['dj_rest_auth.jwt_auth.JWTCookieAuthentication',],
 }
+
+# REST_FRAMEWORK = {
+#     'DATETIME_FORMAT': '%d/%b/%Y',
+#     'DEFAULT_AUTHENTICATION_CLASSES': [(
+#         'rest_framework.authentication.SessionAuthentication'
+#         if 'DEV' in os.environ
+#         else 'dj_rest_auth.jwt_auth.JWTCookieAuthentication'
+#     )],
+# }
 
 REST_AUTH_SERIALIZERS = {
     'USER_DETAILS_SERIALIZER': 'drf_api.serializers.CurrentUserSerializer'
