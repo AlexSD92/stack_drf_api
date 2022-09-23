@@ -38,8 +38,6 @@ CORS_ORIGIN_WHITELIST = (
        'http://localhost:3000',
        'https://stack-react.herokuapp.com', 
        'http://stack-react.herokuapp.com', 
-       'https://3000-alexsd92-stackreact-f9omm9gmrth.ws-eu64.gitpod.io',
-       'https://3000-alexsd92-stackreact-f9omm9gmrth.ws-eu67.gitpod.io',
        'https://3000-alexsd92-stackreact-l043975xff1.ws-eu67.gitpod.io',
 
 )
@@ -56,8 +54,6 @@ CORS_ALLOW_METHODS = [
 CORS_ALLOW_CREDENTIALS = True
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://3000-alexsd92-stackreact-f9omm9gmrth.ws-eu64.gitpod.io',
-    'https://3000-alexsd92-stackreact-f9omm9gmrth.ws-eu67.gitpod.io',
     'https://stack-drf-api.herokuapp.com', 
     'https://8000-alexsd92-stackdrfapi-a398cuy78ue.ws-eu64.gitpod.io',
     'https://3000-alexsd92-stackreact-l043975xff1.ws-eu67.gitpod.io',
@@ -73,15 +69,6 @@ REST_FRAMEWORK = {
     'DATETIME_FORMAT': '%d/%b/%Y',
     'DEFAULT_AUTHENTICATION_CLASSES': ['dj_rest_auth.jwt_auth.JWTCookieAuthentication',],
 }
-
-# REST_FRAMEWORK = {
-#     'DATETIME_FORMAT': '%d/%b/%Y',
-#     'DEFAULT_AUTHENTICATION_CLASSES': [(
-#         'rest_framework.authentication.SessionAuthentication'
-#         if 'DEV' in os.environ
-#         else 'dj_rest_auth.jwt_auth.JWTCookieAuthentication'
-#     )],
-# }
 
 REST_AUTH_SERIALIZERS = {
     'USER_DETAILS_SERIALIZER': 'drf_api.serializers.CurrentUserSerializer', 
@@ -158,14 +145,6 @@ WSGI_APPLICATION = 'drf_api.wsgi.application'
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
