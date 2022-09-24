@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 
 class Question(models.Model):
-    summary = models.CharField(max_length=255, blank=False)
+    summary = models.CharField(blank=False)
     question = models.TextField(blank=False)
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)

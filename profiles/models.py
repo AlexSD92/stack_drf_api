@@ -6,7 +6,7 @@ from django.db.models.signals import post_save
 
 class Profile(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
-    name = models.CharField(max_length=200, blank=True)
+    name = models.CharField(blank=True)
     bio = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
