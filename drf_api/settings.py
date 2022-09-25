@@ -41,6 +41,7 @@ CORS_ORIGIN_WHITELIST = (
        'https://3000-alexsd92-stackreact-l043975xff1.ws-eu67.gitpod.io',
        'https://3000-alexsd92-stackreact-l043975xff1.ws-eu68.gitpod.io',
        'https://3000-alexsd92-stackreact-x34gort52r2.ws-eu67.gitpod.io',
+       'https://3000-alexsd92-stackreact-x34gort52r2.ws-eu68.gitpod.io',
 
 )
 
@@ -61,6 +62,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://3000-alexsd92-stackreact-l043975xff1.ws-eu67.gitpod.io',
     'https://3000-alexsd92-stackreact-l043975xff1.ws-eu68.gitpod.io',
     'https://3000-alexsd92-stackreact-x34gort52r2.ws-eu67.gitpod.io',
+    'https://3000-alexsd92-stackreact-x34gort52r2.ws-eu68.gitpod.io',
     ]
 
 REST_USE_JWT = True
