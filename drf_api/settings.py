@@ -39,6 +39,7 @@ CORS_ORIGIN_WHITELIST = (
        'https://stack-react.herokuapp.com', 
        'http://stack-react.herokuapp.com', 
        'https://3000-alexsd92-stackreact-l043975xff1.ws-eu67.gitpod.io',
+       'https://3000-alexsd92-stackreact-l043975xff1.ws-eu68.gitpod.io',
 
 )
 
@@ -57,6 +58,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://stack-drf-api.herokuapp.com', 
     'https://8000-alexsd92-stackdrfapi-a398cuy78ue.ws-eu64.gitpod.io',
     'https://3000-alexsd92-stackreact-l043975xff1.ws-eu67.gitpod.io',
+    'https://3000-alexsd92-stackreact-l043975xff1.ws-eu68.gitpod.io',
     ]
 
 REST_USE_JWT = True
