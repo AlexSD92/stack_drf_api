@@ -10,7 +10,7 @@ class QuestionList(generics.ListCreateAPIView):
     queryset = Question.objects.all()
 
     def perform_create(self, serializer):
-        serializer.save(owner = self.request.user)
+        serializer.save(owner=self.request.user)
 
 
 class QuestionDetail(generics.RetrieveUpdateDestroyAPIView):

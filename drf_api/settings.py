@@ -36,8 +36,8 @@ CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = (
 
        'http://localhost:3000',
-       'https://stack-react.herokuapp.com', 
-       'http://stack-react.herokuapp.com', 
+       'https://stack-react.herokuapp.com',
+       'http://stack-react.herokuapp.com',
        'https://3000-alexsd92-stackreact-6fq7d3m4yhl.ws-eu68.gitpod.io',
 
 )
@@ -54,7 +54,7 @@ CORS_ALLOW_METHODS = [
 CORS_ALLOW_CREDENTIALS = True
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://stack-drf-api.herokuapp.com', 
+    'https://stack-drf-api.herokuapp.com',
     'https://8000-alexsd92-stackdrfapi-a398cuy78ue.ws-eu64.gitpod.io',
     'https://3000-alexsd92-stackreact-6fq7d3m4yhl.ws-eu68.gitpod.io',
     ]
@@ -67,15 +67,17 @@ JWT_AUTH_SAMESITE = 'None'
 
 REST_FRAMEWORK = {
     'DATETIME_FORMAT': '%d/%b/%Y',
-    'DEFAULT_AUTHENTICATION_CLASSES': ['dj_rest_auth.jwt_auth.JWTCookieAuthentication',],
+    'DEFAULT_AUTHENTICATION_CLASSES':
+        ['dj_rest_auth.jwt_auth.JWTCookieAuthentication', ],
 }
 
 REST_AUTH_SERIALIZERS = {
-    'USER_DETAILS_SERIALIZER': 'drf_api.serializers.CurrentUserSerializer', 
+    'USER_DETAILS_SERIALIZER': 'drf_api.serializers.CurrentUserSerializer',
     'LOGIN_SERIALIZER': 'dj_rest_auth.serializers.LoginSerializer',
     'TOKEN_SERIALIZER': 'dj_rest_auth.serializers.TokenSerializer',
     'JWT_SERIALIZER': 'dj_rest_auth.serializers.JWTSerializer',
-    'JWT_TOKEN_CLAIMS_SERIALIZER': 'rest_framework_simplejwt.serializers.TokenObtainPairSerializer',
+    'JWT_TOKEN_CLAIMS_SERIALIZER':
+        'rest_framework_simplejwt.serializers.TokenObtainPairSerializer',
 }
 
 # Application definition
@@ -151,16 +153,20 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME':
+            'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME':
+            'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME':
+            'django.contrib.auth.password_validation.CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME':
+            'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
 
